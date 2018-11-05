@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TubeTrailer</string>
+    <string name="AvengersInfinityWar_title">Avengers: Infinity War</string>
+    <string name="movie_RD">Released:</string>
+    <string name="aiw_rd">2018-01-01</string>
+    <string name="Movie_t">MOVIE TRAILER</string>
+    <string name="overview">Overview:</string>
+    <string name="aiw_ov">As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.</string>
+    <string name="storyline">Box Office:</string>
+    <string name="aiw_sl">Budget:$321,000,000 (estimated)
+Opening Weekend USA: $257,698,183, 29 April 2018, Wide Release
+Gross USA: $678,815,482
+Cumulative Worldwide Gross: $2,046,664,003</string>
+    <string name="morelikethis">More Like This:</string>
+</resources>
