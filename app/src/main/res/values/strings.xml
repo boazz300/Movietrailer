@@ -10,25 +10,25 @@
 
     <string name="details">Details:</string>
     <string name="details_content">
-        Official Sites: Marvel \n
-        Country: USA \n
-        Language: English \n
-        Release Date: 26 April 2018 (Israel) \n
-        Also Known As: Ha\'nokmim: Milkhemet ha'einsof \n
+        Official Sites: Marvel\n
+        Country: USA\n
+        Language: English\n
+        Release Date: 26 April 2018 (Israel)\n
+        Also Known As: Ha\'nokmim: Milkhemet ha'einsof\n
         Filming Locations: Pinewood Atlanta Studios, 461 Sandy Creek Road, Fayetteville, Georgia, USA
     </string>
     <string name="box_office">Box Office</string>
     <string name="box_office_content">
-        Budget:$321,000,000 (estimated) \n
-        Opening Weekend USA: $257,698,183, 29 April 2018, Wide Release \n
-        Gross USA: $678,815,482 \n
+        Budget:$321,000,000 (estimated)\n
+        Opening Weekend USA: $257,698,183, 29 April 2018, Wide Release\n
+        Gross USA: $678,815,482\n
         Cumulative Worldwide Gross: $2,046,664,003
     </string>
     <string name="technical_specs">Technical Specs</string>
     <string name="technical_specs_content">
-        Runtime: 149 min \n
-        Sound Mix: IMAX 6-Track | Dolby Surround 7.1 | 12-Track Digital Sound (IMAX 12 track)| Dolby Digital | Dolby Atmos | Sonics-DDP | DTS (DTS: X)| Auro 11.1 \n
-        Color: Color (ACES) \n
+        Runtime: 149 min\n
+        Sound Mix: IMAX 6-Track | Dolby Surround 7.1 | 12-Track Digital Sound (IMAX 12 track)| Dolby Digital | Dolby Atmos | Sonics-DDP | DTS (DTS: X)| Auro 11.1\n
+        Color: Color (ACES)\n
         Aspect Ratio: 2.39 : 1
     </string>
 </resources>
