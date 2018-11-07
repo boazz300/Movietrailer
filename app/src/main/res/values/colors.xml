@@ -2,6 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff4081</color>
     <color name="holo_purple_dark">#cc3399</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#6b6b6b</color>
+    <color name="green">#388E3C</color>
+    <color name="purple">#7B1FA2</color>
+    <color name="orange">#FFA500</color>
 </resources>
