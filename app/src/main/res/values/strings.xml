@@ -9,12 +9,11 @@
     <string name="infinity_war_trailer">https://www.youtube.com/watch?v=6ZfuNTqbHE8</string>
 
     <string name="details">Details:</string>
-    <string name="details_content">Official Sites: Marvel\nCountry: USA\nLanguage: English\nRelease Date: 26 April 2018 (Israel)\nAlso Known As: Ha\'nokmim: Milkhemet ha'einsof\nFilming Locations: Pinewood Atlanta Studios, 461 Sandy Creek Road, Fayetteville, Georgia, USA
+    <string name="details_content">Official Sites: Marvel\nCountry: USA\nLanguage: English\nRelease Date: 26 April 2018 (Israel)\nAlso Known As: Ha\'nokmim: Milkhemet ha\'einsof\nFilming Locations: Pinewood Atlanta Studios, 461 Sandy Creek Road, Fayetteville, Georgia, USA
     </string>
     <string name="box_office">Box Office</string>
     <string name="box_office_content">Budget:$321,000,000 (estimated)\nOpening Weekend USA: $257,698,183, 29 April 2018, Wide Release\nGross USA: $678,815,482\nCumulative Worldwide Gross: $2,046,664,003
     </string>
     <string name="technical_specs">Technical Specs</string>
-    <string name="technical_specs_content">Runtime: 149 min\nSound Mix: IMAX 6-Track | Dolby Surround 7.1 | 12-Track Digital Sound (IMAX 12 track)| Dolby Digital | Dolby Atmos | Sonics-DDP | DTS (DTS: X)| Auro 11.1\nColor: Color (ACES)\nAspect Ratio: 2.39 : 1
-    </string>
+    <string name="technical_specs_content">Runtime: 149 min\nSound Mix: IMAX 6-Track | Dolby Surround 7.1 | 12-Track Digital Sound (IMAX 12 track)| Dolby Digital | Dolby Atmos | Sonics-DDP | DTS (DTS: X)| Auro 11.1\nColor: Color (ACES)\nAspect Ratio: 2.39 : 1</string>
 </resources>
