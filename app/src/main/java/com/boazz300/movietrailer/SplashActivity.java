@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.boazz300.movietrailer.movielist.MoviesActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
                     sleep(5*1000);
 
                     // After 5 seconds redirect to another intent
-                    Intent i=new Intent(getBaseContext(),MoviePageActivity.class);
+                    Intent i=new Intent(getBaseContext(),MoviesActivity.class);
                     startActivity(i);
 
                     //Remove activity

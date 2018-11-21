@@ -3,17 +3,94 @@
     <string name="released">Released:</string>
     <string name="b_movie_t">MOVIE TRAILER</string>
     <string name="overview">Overview:</string>
+    <string name="details">Details:</string>
+    <string name="box_office">Box Office</string>
+    <string name="technical_specs">Technical Specs</string>
+
     <string name="infinity_war_title">Avengers: Infinity War</string>
     <string name="infinity_war_release_date">2018-04-26</string>
     <string name="infinity_war_overview">As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.</string>
     <string name="infinity_war_trailer">https://www.youtube.com/watch?v=6ZfuNTqbHE8</string>
+    <string name="infinity_war_details_content">Official Sites: Marvel\nCountry: USA\nLanguage: English\nRelease Date: 26 April 2018 (Israel)\nAlso Known As: Ha\'nokmim: Milkhemet ha\'einsof\nFilming Locations: Pinewood Atlanta Studios, 461 Sandy Creek Road, Fayetteville, Georgia, USA</string>
+    <string name="infinity_war_box_office_content">Budget:$321,000,000 (estimated)\nOpening Weekend USA: $257,698,183, 29 April 2018, Wide Release\nGross USA: $678,815,482\nCumulative Worldwide Gross: $2,046,664,003</string>
+    <string name="infinity_war_technical_specs_content">Runtime: 149 min\nSound Mix: IMAX 6-Track | Dolby Surround 7.1 | 12-Track Digital Sound (IMAX 12 track)| Dolby Digital | Dolby Atmos | Sonics-DDP | DTS (DTS: X)| Auro 11.1\nColor: Color (ACES)\nAspect Ratio: 2.39 : 1</string>
 
-    <string name="details">Details:</string>
-    <string name="details_content">Official Sites: Marvel\nCountry: USA\nLanguage: English\nRelease Date: 26 April 2018 (Israel)\nAlso Known As: Ha\'nokmim: Milkhemet ha\'einsof\nFilming Locations: Pinewood Atlanta Studios, 461 Sandy Creek Road, Fayetteville, Georgia, USA
-    </string>
-    <string name="box_office">Box Office</string>
-    <string name="box_office_content">Budget:$321,000,000 (estimated)\nOpening Weekend USA: $257,698,183, 29 April 2018, Wide Release\nGross USA: $678,815,482\nCumulative Worldwide Gross: $2,046,664,003
-    </string>
-    <string name="technical_specs">Technical Specs</string>
-    <string name="technical_specs_content">Runtime: 149 min\nSound Mix: IMAX 6-Track | Dolby Surround 7.1 | 12-Track Digital Sound (IMAX 12 track)| Dolby Digital | Dolby Atmos | Sonics-DDP | DTS (DTS: X)| Auro 11.1\nColor: Color (ACES)\nAspect Ratio: 2.39 : 1</string>
+    <string name="details_release_text">Released: </string>
+    <string name="details_trailer_text">Movie Trailer</string>
+    <string name="details_overview_text">Overview: </string>
+
+    <!--
+    <string name="jurassic_world_title">Jurassic World - Fallen Kingdom</string>
+    <string name="jurassic_world_release_date">2018-06-07</string>
+    <string name="jurassic_world_overview">Three years after the demise of Jurassic World, a volcanic eruption threatens the remaining dinosaurs on the isla Nublar, so Claire Dearing, the former park manager, recruits Owen Grady to help prevent the extinction of the dinosaurs once again</string>
+    <string name="jurassic_world_trailer">https://www.youtube.com/watch?v=vn9mMeWcgoM</string>
+    <string name="jurassic_world_details_content">Official Sites: Official Site | Official Site [France]\nCountry: USA\nLanguage: English | Russian\nRelease Date: 7 June 2018 (Israel)\nAlso Known As: Olam ha'\Yura: Nefilat ha'\mamlakha\nFilming Locations: London, England, UK</string>
+    <string name="jurassic_world_box_office_content">Budget:$170,000,000 (estimated)\nOpening Weekend USA: $148,024,610, 24 June 2018, Wide Release\nGross USA: $416,769,345\nCumulative Worldwide Gross: $1,304,902,710</string>
+    <string name="jurassic_world_technical_specs_content">Runtime: 128 min\nSound Mix: Dolby Digital | DTS (DTS: X)| Dolby Atmos | Auro 11.1 | Dolby Surround 7.1\nColor: Color\nAspect Ratio: 2.39 : 1</string>
+
+    <string name="the_meg_title">The Meg</string>
+    <string name="the_meg_release_date"></string>
+    <string name="the_meg_overview"></string>
+    <string name="the_meg_trailer"></string>
+    <string name="the_meg_details_content"></string>
+    <string name="the_meg_box_office_content"></string>
+    <string name="the_meg_technical_specs_content"></string>
+
+    <string name="the_first_purge_title">The First Purge</string>
+    <string name="the_first_purge_release_date"></string>
+    <string name="the_first_purge_overview"></string>
+    <string name="the_first_purge_trailer"></string>
+    <string name="the_first_purge_details_content"></string>
+    <string name="the_first_purge_box_office_content"></string>
+    <string name="the_first_purge_technical_specs_content"></string>
+
+    <string name="deadpool_2_title">Deadpool 2</string>
+    <string name="deadpool_2_release_date"></string>
+    <string name="deadpool_2_overview"></string>
+    <string name="deadpool_2_trailer"></string>
+    <string name="deadpool_2_details_content"></string>
+    <string name="deadpool_2_box_office_content"></string>
+    <string name="deadpool_2_technical_specs_content"></string>
+
+    <string name="black_panther_title">Black Panther</string>
+    <string name="black_panther_release_date"></string>
+    <string name="black_panther_overview"></string>
+    <string name="black_panther_trailer"></string>
+    <string name="black_panther_details_content"></string>
+    <string name="black_panther_box_office_content"></string>
+    <string name="black_panther_technical_specs_content"></string>
+
+    <string name="oceans_eight_title">Ocean\'s Eight</string>
+    <string name="oceans_eight_release_date"></string>
+    <string name="oceans_eight_overview"></string>
+    <string name="oceans_eight_trailer"></string>
+    <string name="oceans_eight_details_content"></string>
+    <string name="oceans_eight_box_office_content"></string>
+    <string name="oceans_eight_technical_specs_content"></string>
+
+    <string name="interstellar_title">Interstellar</string>
+    <string name="interstellar_release_date"></string>
+    <string name="interstellar_overview"></string>
+    <string name="interstellar_trailer"></string>
+    <string name="interstellar_details_content"></string>
+    <string name="interstellar_box_office_content"></string>
+    <string name="interstellar_technical_specs_content"></string>
+
+    <string name="thor_ragnarok_title">Thor - Ragnarok</string>
+    <string name="thor_ragnarok_release_date"></string>
+    <string name="thor_ragnarok_overview"></string>
+    <string name="thor_ragnarok_trailer"></string>
+    <string name="thor_ragnarok_details_content"></string>
+    <string name="thor_ragnarok_box_office_content"></string>
+    <string name="thor_ragnarok_technical_specs_content"></string>
+
+    <string name="guardians_of_the_galaxy_title">Guardians of the Galaxy</string>
+    <string name="guardians_of_the_galaxy_release_date"></string>
+    <string name="guardians_of_the_galaxy_overview"></string>
+    <string name="guardians_of_the_galaxy_trailer"></string>
+    <string name="guardians_of_the_galaxy_details_content"></string>
+    <string name="guardians_of_the_galaxy_box_office_content"></string>
+    <string name="guardians_of_the_galaxy_technical_specs_content"></string>
+    -->
+
 </resources>
