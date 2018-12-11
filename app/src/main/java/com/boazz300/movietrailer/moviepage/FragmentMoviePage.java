@@ -51,19 +51,19 @@ public class FragmentMoviePage extends Fragment implements View.OnClickListener 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_fragment_movie_page, container, false);
+        return inflater.inflate(R.layout.fragment_movie_page, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ivImage = view.findViewById(R.id.details_iv_image);
-        ivBackImage = view.findViewById(R.id.details_iv_back);
-        tvTitle = view.findViewById(R.id.details_tv_title);
-        tvReleaseDate = view.findViewById(R.id.details_tv_released_date);
-        tvOverview = view.findViewById(R.id.details_tv_overview_text);
+        ivImage = view.findViewById(R.id.image_details_iv_image);
+        ivBackImage = view.findViewById(R.id.image_details_iv_back);
+        tvTitle = view.findViewById(R.id.text_details_tv_title);
+        tvReleaseDate = view.findViewById(R.id.text_details_tv_released_date);
+        tvOverview = view.findViewById(R.id.text_details_tv_overview_text);
 
-        Button btnTrailer = view.findViewById(R.id.details_btn_trailer);
+        Button btnTrailer = view.findViewById(R.id.button_details_btn_trailer);
         btnTrailer.setOnClickListener(this);
 
         setMovie();

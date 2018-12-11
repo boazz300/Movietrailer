@@ -5,11 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.boazz300.movietrailer.R;
 import com.boazz300.movietrailer.model.MovieModel;
 import com.boazz300.movietrailer.model.MoviesContent;
 import com.boazz300.movietrailer.moviepage.MoviePageActivity;
+import com.boazz300.movietrailer.Threads.*;
 
 public class MoviesActivity extends AppCompatActivity implements OnMovieClickListener {
 
@@ -17,6 +22,8 @@ public class MoviesActivity extends AppCompatActivity implements OnMovieClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
         RecyclerView recyclerView = findViewById(R.id.movies_rv_list);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -33,6 +40,29 @@ public class MoviesActivity extends AppCompatActivity implements OnMovieClickLis
         Intent intent = new Intent(this, MoviePageActivity.class);
         intent.putExtra(MoviePageActivity.EXTRA_ITEM_POSITION, itemPosition);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_movies, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_open_async_task:
+                startActivity(new Intent(MoviesActivity.this, AsyncTaskActivity.class));
+                return true;
+
+            case R.id.action_open_thread_handler:
+                startActivity(new Intent(MoviesActivity.this, ThreadsActivity.class));
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     private void loadMovies() {

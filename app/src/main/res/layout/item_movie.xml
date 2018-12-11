@@ -7,7 +7,7 @@
     android:padding="@dimen/spacing_s">
 
     <ImageView
-        android:id="@+id/item_movie_iv"
+        android:id="@+id/image_item_movie_iv"
         android:layout_width="90dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,7 +16,7 @@
         tools:src="@drawable/main_avengersinfinitywar" />
 
     <TextView
-        android:id="@+id/item_movie_tv_title"
+        android:id="@+id/text_item_movie_tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_s"
@@ -25,12 +25,12 @@
         android:maxLines="1"
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/item_movie_iv"
-        app:layout_constraintTop_toTopOf="@+id/item_movie_iv"
+        app:layout_constraintStart_toEndOf="@id/image_item_movie_iv"
+        app:layout_constraintTop_toTopOf="@+id/image_item_movie_iv"
         tools:text="Title" />
 
     <TextView
-        android:id="@+id/item_movie_tv_overview"
+        android:id="@+id/text_item_movie_tv_overview"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/spacing_s"
@@ -38,10 +38,10 @@
         android:gravity="start"
         android:maxLines="4"
         android:textAppearance="?attr/textAppearanceListItemSecondary"
-        app:layout_constraintBottom_toBottomOf="@id/item_movie_iv"
+        app:layout_constraintBottom_toBottomOf="@id/image_item_movie_iv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/item_movie_tv_title"
-        app:layout_constraintTop_toBottomOf="@id/item_movie_tv_title"
+        app:layout_constraintStart_toStartOf="@id/text_item_movie_tv_title"
+        app:layout_constraintTop_toBottomOf="@id/text_item_movie_tv_title"
         tools:text="Content" />
 
 </android.support.constraint.ConstraintLayout>

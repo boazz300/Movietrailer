@@ -19,78 +19,23 @@
     <string name="details_trailer_text">Movie Trailer</string>
     <string name="details_overview_text">Overview: </string>
 
-    <!--
-    <string name="jurassic_world_title">Jurassic World - Fallen Kingdom</string>
-    <string name="jurassic_world_release_date">2018-06-07</string>
-    <string name="jurassic_world_overview">Three years after the demise of Jurassic World, a volcanic eruption threatens the remaining dinosaurs on the isla Nublar, so Claire Dearing, the former park manager, recruits Owen Grady to help prevent the extinction of the dinosaurs once again</string>
-    <string name="jurassic_world_trailer">https://www.youtube.com/watch?v=vn9mMeWcgoM</string>
-    <string name="jurassic_world_details_content">Official Sites: Official Site | Official Site [France]\nCountry: USA\nLanguage: English | Russian\nRelease Date: 7 June 2018 (Israel)\nAlso Known As: Olam ha'\Yura: Nefilat ha'\mamlakha\nFilming Locations: London, England, UK</string>
-    <string name="jurassic_world_box_office_content">Budget:$170,000,000 (estimated)\nOpening Weekend USA: $148,024,610, 24 June 2018, Wide Release\nGross USA: $416,769,345\nCumulative Worldwide Gross: $1,304,902,710</string>
-    <string name="jurassic_world_technical_specs_content">Runtime: 128 min\nSound Mix: Dolby Digital | DTS (DTS: X)| Dolby Atmos | Auro 11.1 | Dolby Surround 7.1\nColor: Color\nAspect Ratio: 2.39 : 1</string>
 
-    <string name="the_meg_title">The Meg</string>
-    <string name="the_meg_release_date"></string>
-    <string name="the_meg_overview"></string>
-    <string name="the_meg_trailer"></string>
-    <string name="the_meg_details_content"></string>
-    <string name="the_meg_box_office_content"></string>
-    <string name="the_meg_technical_specs_content"></string>
-
-    <string name="the_first_purge_title">The First Purge</string>
-    <string name="the_first_purge_release_date"></string>
-    <string name="the_first_purge_overview"></string>
-    <string name="the_first_purge_trailer"></string>
-    <string name="the_first_purge_details_content"></string>
-    <string name="the_first_purge_box_office_content"></string>
-    <string name="the_first_purge_technical_specs_content"></string>
-
-    <string name="deadpool_2_title">Deadpool 2</string>
-    <string name="deadpool_2_release_date"></string>
-    <string name="deadpool_2_overview"></string>
-    <string name="deadpool_2_trailer"></string>
-    <string name="deadpool_2_details_content"></string>
-    <string name="deadpool_2_box_office_content"></string>
-    <string name="deadpool_2_technical_specs_content"></string>
-
-    <string name="black_panther_title">Black Panther</string>
-    <string name="black_panther_release_date"></string>
-    <string name="black_panther_overview"></string>
-    <string name="black_panther_trailer"></string>
-    <string name="black_panther_details_content"></string>
-    <string name="black_panther_box_office_content"></string>
-    <string name="black_panther_technical_specs_content"></string>
-
-    <string name="oceans_eight_title">Ocean\'s Eight</string>
-    <string name="oceans_eight_release_date"></string>
-    <string name="oceans_eight_overview"></string>
-    <string name="oceans_eight_trailer"></string>
-    <string name="oceans_eight_details_content"></string>
-    <string name="oceans_eight_box_office_content"></string>
-    <string name="oceans_eight_technical_specs_content"></string>
-
-    <string name="interstellar_title">Interstellar</string>
-    <string name="interstellar_release_date"></string>
-    <string name="interstellar_overview"></string>
-    <string name="interstellar_trailer"></string>
-    <string name="interstellar_details_content"></string>
-    <string name="interstellar_box_office_content"></string>
-    <string name="interstellar_technical_specs_content"></string>
-
-    <string name="thor_ragnarok_title">Thor - Ragnarok</string>
-    <string name="thor_ragnarok_release_date"></string>
-    <string name="thor_ragnarok_overview"></string>
-    <string name="thor_ragnarok_trailer"></string>
-    <string name="thor_ragnarok_details_content"></string>
-    <string name="thor_ragnarok_box_office_content"></string>
-    <string name="thor_ragnarok_technical_specs_content"></string>
-
-    <string name="guardians_of_the_galaxy_title">Guardians of the Galaxy</string>
-    <string name="guardians_of_the_galaxy_release_date"></string>
-    <string name="guardians_of_the_galaxy_overview"></string>
-    <string name="guardians_of_the_galaxy_trailer"></string>
-    <string name="guardians_of_the_galaxy_details_content"></string>
-    <string name="guardians_of_the_galaxy_box_office_content"></string>
-    <string name="guardians_of_the_galaxy_technical_specs_content"></string>
-    -->
+    <string name="title_activity_async_task">AsyncTaskActivity</string>
+    <string name="async_task_activity">This is AsyncTask Activity</string>
+    <string name="handler_exe_activity">This is Thread Handler Activity</string>
+    <string name="btn_create">Create</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_start">Start</string>
+    <string name="msg_oncreate">Async Task created</string>
+    <string name="msg_onstart">Async Task Started</string>
+    <string name="msg_oncancel">Async Task cancelled</string>
+    <string name="msg_thread_oncreate">Thread Task created</string>
+    <string name="msg_thread_onstart">Thread Task Started</string>
+    <string name="msg_thread_oncancel">Thread Task cancelled</string>
+    <string name="msg_preexecute">Pre execute run</string>
+    <string name="msg_postexecute">Post execute run</string>
+    <string name="msg_should_create_task">must click \"create\" task first</string>
+    <string name="done">Done!</string>
+    <string name="title_activity_threads">ThreadsActivity</string>
 
 </resources>
