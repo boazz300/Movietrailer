@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.boazz300.movietrailer.BackgroundServices.BGServiceActivity;
+import com.boazz300.movietrailer.BackgroundServices.BGServiceActivity;
 import com.boazz300.movietrailer.R;
 import com.boazz300.movietrailer.model.MovieModel;
 import com.boazz300.movietrailer.model.MoviesContent;
@@ -58,6 +60,10 @@ public class MoviesActivity extends AppCompatActivity implements OnMovieClickLis
 
             case R.id.action_open_thread_handler:
                 startActivity(new Intent(MoviesActivity.this, ThreadsActivity.class));
+                return true;
+
+            case R.id.action_open_background_service:
+                startActivity(new Intent(MoviesActivity.this, BGServiceActivity.class));
                 return true;
 
             default:
