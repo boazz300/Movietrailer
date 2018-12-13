@@ -15,7 +15,7 @@ import com.boazz300.movietrailer.R;
 
 import java.time.Instant;
 
-class HardJobService extends Service {
+public class HardJobService extends Service {
 
     private static final String TAG = "HardJobService";
 

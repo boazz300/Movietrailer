@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 
 import com.boazz300.movietrailer.R;
 
-class HardJobIntentService extends IntentService {
+public class HardJobIntentService extends IntentService {
 
     private static final String TAG = "HardJobIntentService";
     private boolean isDestroyed;
