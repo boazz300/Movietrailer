@@ -46,4 +46,8 @@
     <string name="starting_hardjob_service_msg">Starting Hard Job Service</string>
     <string name="finishing_hardjob_service_msg">Finishing Hard Job Service, id: %1$d</string>
 
+
+    <string name="something_went_wrong_text">Something went wrong :-/</string>
+    <string name="details_loading_trailer_text">Loading…</string>
+
 </resources>

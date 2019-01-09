@@ -2,6 +2,7 @@ package com.boazz300.movietrailer.movielist;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 
 import com.boazz300.movietrailer.R;
 import com.boazz300.movietrailer.model.MovieModel;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -17,20 +20,18 @@ public class MoviesViewAdapter extends RecyclerView.Adapter<MoviesViewAdapter.Vi
 
     private final List<MovieModel> movies;
     private OnMovieClickListener movieClickListener;
-    private LayoutInflater mLayoutInflater;
+    private Picasso picasso;
 
-    public MoviesViewAdapter(List<MovieModel> items,
-                             OnMovieClickListener listener,
-                             Context context) {
+
+    public MoviesViewAdapter(List<MovieModel> items, OnMovieClickListener listener) {
         movies = items;
         movieClickListener = listener;
-        mLayoutInflater = (LayoutInflater)context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        picasso = Picasso.get();
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mLayoutInflater.inflate(R.layout.item_movie, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movie, parent, false);
         return new ViewHolder(view);
     }
 
@@ -59,7 +60,18 @@ public class MoviesViewAdapter extends RecyclerView.Adapter<MoviesViewAdapter.Vi
         }
 
         public void bind(MovieModel movieModel) {
-            ivImage.setImageResource(movieModel.getImageRes());
+            picasso.load(movieModel.getImageUri())
+                    .into(ivImage, new Callback() {
+                        @Override
+                        public void onSuccess() {
+                            Log.i("onSuccess", "onSuccess");
+                        }
+
+                        @Override
+                        public void onError(Exception e) {
+                            Log.d("onError", "onError() called with: e = [" + e + "]");
+                        }
+                    });
             tvTitle.setText(movieModel.getName());
             tvOverview.setText(movieModel.getOverview());
         }
