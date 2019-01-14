@@ -2,6 +2,7 @@ package com.boazz300.movietrailer.model;
 
 import com.boazz300.movietrailer.rest.MoviesService;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MovieModelConverter {
 
@@ -11,9 +12,19 @@ public class MovieModelConverter {
         for (MovieResult movieResult : movieListResult.getResults()) {
             result.add(new MovieModel(movieResult.getId(), movieResult.getTitle(), MoviesService.POSTER_BASE_URL + movieResult.getPosterPath(),
                     MoviesService.BACKDROP_BASE_URL + movieResult.getBackdropPath(), movieResult.getOverview(),
-                    movieResult.getReleaseDate()));
+                    movieResult.getReleaseDate(), movieResult.getPopularity()));
         }
 
         return result;
+    }
+
+    public static VideoModel convertVideoResult(VideosListResult videosListResult) {
+        List<VideoResult> results = videosListResult.getResults();
+        if (results != null && !results.isEmpty()) {
+            VideoResult videoResult = results.get(0);
+            return new VideoModel(videosListResult.getId(), videoResult.getId(), videoResult.getKey());
+
+        }
+        return null;
     }
 }

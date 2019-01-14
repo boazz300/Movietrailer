@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class MovieResult {
+
     @SerializedName("vote_count")
     @Expose
     private Integer voteCount;
@@ -160,4 +161,5 @@ public class MovieResult {
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
+
 }

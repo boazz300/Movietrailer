@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class VideosListResult {
+
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -28,4 +29,6 @@ public class VideosListResult {
     public void setResults(List<VideoResult> results) {
         this.results = results;
     }
+
 }
+

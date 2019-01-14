@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,7 +23,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.boazz300.movietrailer.R;
+import com.boazz300.movietrailer.db.AppDatabase;
 import com.boazz300.movietrailer.model.MovieModel;
+import com.boazz300.movietrailer.model.MovieModelConverter;
+import com.boazz300.movietrailer.model.VideoModel;
 import com.boazz300.movietrailer.model.VideoResult;
 import com.boazz300.movietrailer.model.VideosListResult;
 import com.boazz300.movietrailer.rest.MoviesService;
@@ -104,8 +108,22 @@ public class FragmentMoviePage extends Fragment implements View.OnClickListener 
     public void onClick(View view) {
         if (movieModel == null) return;
 
-        setButtonLoadingStatus();
+        FragmentActivity activity = getActivity();
+        if (activity == null) {
+            return;
+        }
+        final Context context = activity.getApplicationContext();
+        if (context == null) {
+            return;
+        }
 
+        final VideoModel videoModel = AppDatabase.getInstance(context).videoDao().getVideo(movieModel.getMovieId());
+        if (videoModel != null) {
+            playTrailer(videoModel.getKey());
+            return;
+        }
+
+        setButtonLoadingStatus();
         MoviesService moviesService = RestClientManager.getMovieServiceInstance();
         moviesService.getVideos(movieModel.getMovieId())
                 .enqueue(new Callback<VideosListResult>() {
@@ -116,9 +134,12 @@ public class FragmentMoviePage extends Fragment implements View.OnClickListener 
                         if (body != null) {
                             List<VideoResult> results = body.getResults();
                             if (results != null && !results.isEmpty()) {
-                                String trailerUrl = MoviesService.YOUTUBE_BASE_URL + results.get(0).getKey();
-                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(trailerUrl));
-                                startActivity(browserIntent);
+                                VideoModel convertedVideoModel = MovieModelConverter.convertVideoResult(body);
+                                if (convertedVideoModel != null) {
+                                    AppDatabase.getInstance(context).videoDao().insert(convertedVideoModel);
+                                    String key = convertedVideoModel.getKey();
+                                    playTrailer(key);
+                                }
                             }
                         }
                         resetButtonStatus();
@@ -131,6 +152,13 @@ public class FragmentMoviePage extends Fragment implements View.OnClickListener 
                     }
                 });
     }
+
+    private void playTrailer(String key) {
+        String trailerUrl = MoviesService.YOUTUBE_BASE_URL + key;
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(trailerUrl));
+        startActivity(browserIntent);
+    }
+
     private void setButtonLoadingStatus() {
         Context context = getContext();
         if (context == null) {

@@ -8,27 +8,32 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.boazz300.movietrailer.R;
+import com.boazz300.movietrailer.db.AppDatabase;
 import com.boazz300.movietrailer.model.MovieListResult;
+import com.boazz300.movietrailer.model.MovieModel;
 import com.boazz300.movietrailer.model.MovieModelConverter;
 import com.boazz300.movietrailer.model.MoviesContent;
 import com.boazz300.movietrailer.moviepage.MoviePageActivity;
 import com.boazz300.movietrailer.rest.RestClientManager;
 import com.boazz300.movietrailer.rest.MoviesService;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MoviesActivity extends AppCompatActivity implements OnMovieClickListener {
 
     private RecyclerView recyclerView;
     private View progressBar;
+    private MoviesViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +43,7 @@ public class MoviesActivity extends AppCompatActivity implements OnMovieClickLis
         progressBar = findViewById(R.id.main_progress);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
@@ -58,37 +64,14 @@ public class MoviesActivity extends AppCompatActivity implements OnMovieClickLis
         intent.putExtra(MoviePageActivity.EXTRA_ITEM_POSITION, itemPosition);
         startActivity(intent);
     }
-    /*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_movies, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_open_async_task:
-                startActivity(new Intent(MoviesActivity.this, AsyncTaskActivity.class));
-                return true;
-
-            case R.id.action_open_thread_handler:
-                startActivity(new Intent(MoviesActivity.this, ThreadsActivity.class));
-                return true;
-
-            case R.id.action_open_background_service:
-                startActivity(new Intent(MoviesActivity.this, BGServiceActivity.class));
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-    */
 
     private void loadMovies() {
         MoviesContent.clear();
+        List<MovieModel> cachedMovies = AppDatabase.getInstance(this).movieDao().getAll();
+        MoviesContent.MOVIES.addAll(cachedMovies);
+        adapter = new MoviesViewAdapter(MoviesContent.MOVIES, MoviesActivity.this);
+        recyclerView.setAdapter(adapter);
+
         progressBar.setVisibility(View.VISIBLE);
         MoviesService moviesService = RestClientManager.getMovieServiceInstance();
         moviesService.searchImage().enqueue(new Callback<MovieListResult>() {
@@ -97,20 +80,40 @@ public class MoviesActivity extends AppCompatActivity implements OnMovieClickLis
                 Log.i("response", "response");
                 progressBar.setVisibility(View.GONE);
                 if (response.code() == 200) {
+                    MoviesContent.clear();
                     MoviesContent.MOVIES.addAll(MovieModelConverter.convertResult(response.body()));
-                    recyclerView.setAdapter(new MoviesViewAdapter(MoviesContent.MOVIES, MoviesActivity.this));
+                    adapter.setData(MoviesContent.MOVIES);
+                    AppDatabase.getInstance(MoviesActivity.this).movieDao().deleteAll();
+                    AppDatabase.getInstance(MoviesActivity.this).movieDao().insertAll(MoviesContent.MOVIES);
                 }
             }
 
             @Override
             public void onFailure(Call<MovieListResult> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
-                Log.i("failure", "failure");
                 Toast.makeText(MoviesActivity.this, R.string.something_went_wrong_text, Toast.LENGTH_SHORT).show();
 
             }
         });
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_delete:
+                AppDatabase.getInstance(this.getApplicationContext()).movieDao().deleteAll();
+                adapter.clearData();
+                break;
+        }
+
+        return true;
+    }
 }
 

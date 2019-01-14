@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class VideoResult {
+
     @SerializedName("id")
     @Expose
     private String id;
@@ -92,4 +93,5 @@ public class VideoResult {
     public void setType(String type) {
         this.type = type;
     }
+
 }

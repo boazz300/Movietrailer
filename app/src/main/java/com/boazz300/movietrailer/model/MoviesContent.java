@@ -14,3 +14,4 @@ public class MoviesContent {
         MOVIES.add(movie);
     }
 }
+

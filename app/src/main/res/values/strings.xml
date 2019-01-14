@@ -50,4 +50,6 @@
     <string name="something_went_wrong_text">Something went wrong :-/</string>
     <string name="details_loading_trailer_text">Loading…</string>
 
+    <string name="action_settings">Settings</string>
+
 </resources>

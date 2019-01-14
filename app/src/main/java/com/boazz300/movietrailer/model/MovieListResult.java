@@ -1,11 +1,13 @@
 package com.boazz300.movietrailer.model;
 
+import com.boazz300.movietrailer.model.MovieResult;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class MovieListResult {
+
     @SerializedName("page")
     @Expose
     private Integer page;
@@ -50,4 +52,5 @@ public class MovieListResult {
     public void setResults(List<MovieResult> results) {
         this.results = results;
     }
+
 }
